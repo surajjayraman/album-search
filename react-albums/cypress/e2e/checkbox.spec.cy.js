@@ -7,5 +7,7 @@ describe('tests to see if cypress is working', () => {
         cy.get('.filters__form-group')
             .first()
             .find('input')
+            .uncheck()
+            .should('not.be.checked')
     });
 })
