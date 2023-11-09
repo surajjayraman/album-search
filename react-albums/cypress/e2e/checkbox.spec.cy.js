@@ -1,7 +1,7 @@
 
 describe('tests to see if cypress is working', () => {
 
-    it('can visit the web page', () => {
+    it('can uncheck the explicit checkbox', () => {
         cy.visit('http://localhost:8002/');
 
         cy.get('.filters__form-group')
@@ -10,4 +10,6 @@ describe('tests to see if cypress is working', () => {
             .uncheck()
             .should('not.be.checked')
     });
+
+    
 })
