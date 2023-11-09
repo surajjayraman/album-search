@@ -20,10 +20,11 @@ describe('tests to see if cypress is working', () => {
             .should('not.be.checked')
     });
 
-    
+
     it('can uncheck the explicit by clicking on the label', () => {
         cy.visit('http://localhost:8002/');
-        cy.contains('EP');
+        cy.contains('EP')
+            .click()
 
     });
 })
