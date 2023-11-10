@@ -1,15 +1,15 @@
 
-describe('tests to see if cypress is working', () => {
+describe('tests for the input field', () => {
 
     beforeEach(() => {
         cy.visit("/");
     })
 
-    it('can uncheck the explicit checkbox', () => {
+    it('it can type into the input field', () => {
 
-        cy.get('.filters__form-group')
-            .first()
-            .find('input')
-            .uncheck()
+        cy.get('.search__form')
+        .find("input.radius")
+        .type("shakira", {delay: 250})
+
     });
 })
