@@ -2,7 +2,7 @@
 describe('tests to see if cypress is working', () => {
 
     beforeEach(() => {
-        cy.visit('http://localhost:8002/');
+        cy.visit("/");
     })
 
     it('can uncheck the explicit checkbox', () => {
