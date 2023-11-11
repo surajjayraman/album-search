@@ -4,5 +4,11 @@ describe('tests for the input field', () => {
         cy.visit('/')
             .intercept("GET", "**/search*", { fixture: "itunes.json" })
             .as("itunesResults");
+
+        cy.get('.search__form')
+            .find('input.radius')
+            .type("Daft Punk", { delay: 200 });
     });
+
+
 });
