@@ -8,6 +8,9 @@ describe('tests for the input field', () => {
         cy.get('.search__form')
             .find('input.radius')
             .type("Daft Punk", { delay: 200 });
+
+        cy.get(".spinner")
+            .should("be.visible");
     });
 
 
