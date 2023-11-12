@@ -15,6 +15,12 @@ describe('tests for the input field', () => {
         cy.wait("@itunesResults")
             .get("main")
             .contains("Random Access");
+
+        cy.get("#Explicit")
+            .uncheck();
+
+        cy.get("article.album")
+            .should("not.contain", "Daft Club");
     });
 
 
