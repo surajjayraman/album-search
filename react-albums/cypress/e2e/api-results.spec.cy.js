@@ -11,6 +11,10 @@ describe('tests for the input field', () => {
 
         cy.get(".spinner")
             .should("be.visible");
+
+        cy.wait("@itunesResults")
+            .get("main")
+            .contains("Random Access");
     });
 
 
