@@ -21,6 +21,9 @@ describe('tests for the input field', () => {
 
         cy.get("article.album")
             .should("not.contain", "Daft Club");
+
+        cy.get("article.album")
+            .should("be.visible", "Daft Club");
     });
 
 
