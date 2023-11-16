@@ -5,14 +5,16 @@ describe('tests for the input field', () => {
         cy.visit("/");
 
         cy.get('.search__form')
-        .find("input.radius")
-        .as("inputField");
+            .find("input.radius")
+            .as("inputField");
     })
 
     it('it can type into the input field', () => {
 
         cy.get('@inputField')
             .type("shakira", { delay: 250 })
+        cy.get('@inputField')
+            .type("queen", { delay: 250 })
 
     });
 
